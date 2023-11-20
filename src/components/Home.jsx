@@ -8,16 +8,12 @@ const Home = () => {
 
   const handleClick = () => {
     if (!showH2 && !showH3) {
-      // On the first click, set showH2 to true
       setShowH2(true);
     } else if (showH2 && !showH3) {
-      // On the second click, set showH2 to false and showH3 to true
       setShowH2(false);
       setShowH3(true);
     }
-    // Subsequent clicks won't have any effect
   };
-  
 
   return (
     <div name='home' className='w-full h-screen bg-[#2b2b2b] flex flex-col items-center justify-center'>
@@ -27,16 +23,17 @@ const Home = () => {
             src={Logo}
             alt="Logo Image"
             style={{ width: '200px', height: '200px', cursor: 'pointer' }}
-            onClick={handleClick}
           />
         </div>
         <div className='max-w-[1000px] mx-auto px-8' style={{ minHeight: '300px' }}>
           {/* Container */}
-            <FadeIn>
-              <h1 className='text-7xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-center cursor-pointer'>
-                Hello there!
-              </h1>
-            </FadeIn>
+          <FadeIn>
+            <h1 
+            onClick={handleClick}
+            className='text-7xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-center cursor-pointer'>
+              Hello there!
+            </h1>
+          </FadeIn>
           {showH2 && (
             <FadeIn>
               <h2 name='Title2' className='text-5xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-[#5CE1E6] font-semibold'>
@@ -46,7 +43,7 @@ const Home = () => {
           )}
           {showH3 && (
             <FadeIn>
-              <h3 name='Title3' className='sm:text-4xl text-5xl lg:text-6xl text-center text-pink-600 font-semibold'>
+              <h3 name='Title3' className='text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-center text-pink-600 font-semibold'>
                 I'm an implementation Consultant
               </h3>
             </FadeIn>

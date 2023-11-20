@@ -17,13 +17,13 @@ const About = () => {
       <div className='flex flex-col justify-center items-start w-full h-full px-4'>
         <div className='max-w-[1500px] w-full'>
           <div className='pb-4'>
-            <p className='pr-2 text-4xl inline border-b-4 border-pink-700'>About</p>
+            <p className='pr-2 text-4xl font-bold inline border-b-4 border-pink-700'>About</p>
           </div>
         </div>
         <TextSection
           title="Hi, I'm Iago, nice to meet you."
           content="I am a versatile professional with a demonstrated history of successfully implementing a variety of applications within the life sciences sector. Proven expertise in crafting customized solutions, executing large-scale projects."
-          titleClass="sm:text-left text-4xl font-bold p-2"
+          titleClass="sm:text-left text-4xl font-semibold p-2"
           contentClass="sm:text-left sm:text-xl text-2xl lg:text-2xl xl:text-3xl px-2 py-2"
         />
         <TextSection
@@ -41,7 +41,7 @@ const About = () => {
               <p>Through continuous learning and diverse experiences, I've reached a point where I can leverage tech to contribute to the thrilling world of life sciences. Here's to the exciting journey ahead! 🚀</p>
             </>
           }
-          titleClass='sm:text-left text-4xl font-bold p-2'
+          titleClass='sm:text-left text-4xl font-semibold p-2'
           contentClass='text-lg md:text-2lg lg:text-2lg xl:text-3lg px-2 py-2'
         />
       </div>

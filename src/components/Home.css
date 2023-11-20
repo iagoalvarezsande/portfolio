@@ -1,0 +1,20 @@
+/* Add this CSS for transition effects */
+
+.switch-fade-enter {
+    opacity: 0;
+  }
+  
+  .switch-fade-enter-active {
+    opacity: 1;
+    transition: opacity 2s ease-in-out; /* Adjust the timing and easing */
+  }
+  
+  .switch-fade-exit {
+    opacity: 1;
+  }
+  
+  .switch-fade-exit-active {
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Adjust the timing and easing */
+  }
+  

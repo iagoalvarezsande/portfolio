@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaLinkedin, FaGithub } from 'react-icons/fa';
 import Logo from '../assets/Logo.png';
 
 const Searchbar = () => {
@@ -19,6 +19,15 @@ const Searchbar = () => {
         <li>About</li>
         <li>Skills</li>
         <li>Interests</li>
+        <li 
+        style={{ display: 'flex', alignItems: 'center'}}>
+        <FaLinkedin style={{ marginRight: '8px' }} />
+        <p>Linkedin</p>
+        </li>
+        <li style={{display: 'flex', alignItems: 'center'}}>
+          <FaGithub style={{marginRight: '8px'}}/>
+          <p>GitHub</p>
+        </li>
       </ul>
 
       {/* Hamburger (three dots) always in the top-right corner */}
