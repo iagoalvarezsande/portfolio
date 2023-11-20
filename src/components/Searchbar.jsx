@@ -17,7 +17,7 @@ const Searchbar = () => {
       <ul className="hidden md:flex">
         <li>Home</li>
         <li>About</li>
-        <li>Experience</li>
+        <li>Skills</li>
         <li>Interests</li>
       </ul>
 
