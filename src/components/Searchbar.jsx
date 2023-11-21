@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes, FaLinkedin, FaGithub } from 'react-icons/fa';
 import Logo from '../assets/Logo.png';
+import { Link } from 'react-scroll';
 
 const Searchbar = () => {
   const [search, setSearch] = useState(false);
@@ -15,18 +16,27 @@ const Searchbar = () => {
 
       {/* Menu for larger screens */}
       <ul className="hidden md:flex">
-        <li>Home</li>
-        <li>About</li>
-        <li>Skills</li>
-        <li>Interests</li>
+        <li>
+        <Link to="home" smooth={true} duration={500}>
+          Home</Link></li>
+        <li>
+        <Link to="about" smooth={true} duration={500}>
+          About</Link></li>
+        <li><Link to="skills" smooth={true} duration={500}>
+          Skills</Link></li>
+        <li className='hidden'>Interests</li>
         <li 
         style={{ display: 'flex', alignItems: 'center'}}>
+        <a href="https://www.linkedin.com/in/iago-alvarez-sande-8b703b17b/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'white' }}>
         <FaLinkedin style={{ marginRight: '8px' }} />
         <p>Linkedin</p>
+        </a>
         </li>
         <li style={{display: 'flex', alignItems: 'center'}}>
-          <FaGithub style={{marginRight: '8px'}}/>
-          <p>GitHub</p>
+        <a href="https://github.com/iagoalvarezsande" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'white' }}>
+            <FaGithub style={{ marginRight: '8px' }} />
+            <p>GitHub</p>
+          </a>
         </li>
       </ul>
 
@@ -41,10 +51,27 @@ const Searchbar = () => {
 
       {/* Mobile Menu */}
       <ul className={!search ? 'hidden' : 'md:hidden absolute top-0 right-0 left-0 w-full h-screen bg-[#2b2b2b] flex flex-col justify-center items-center'}>
-        <li className='py-6 px-4xl text-lg'>About</li>
-        <li className='py-6 px-4xl text-lg'>Home</li>
-        <li className='py-6 px-4xl text-lg'>Experience</li>
-        <li className='py-6 px-4xl text-lg'>Interests</li>
+        <li className='py-6 px-4xl text-lg'>
+          <Link  onClick={handleClick} to="home" smooth={true} duration={500}>
+          Home</Link></li>
+        <li className='py-6 px-4xl text-lg'><Link  onClick={handleClick} to="about" smooth={true} duration={500}>
+          About</Link></li>
+        <li className='py-6 px-4xl text-lg'><Link  onClick={handleClick} to="skills" smooth={true} duration={500}>
+          Skills</Link></li>
+        <li className='py-6 px-4xl text-lg hidden'>Interests</li>
+        <li className='py-6 px-4xl text-lg'
+        style={{ display: 'flex', alignItems: 'center'}}>
+        <a href="https://www.linkedin.com/in/iago-alvarez-sande-8b703b17b/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'white' }}>
+        <FaLinkedin style={{ marginRight: '8px' }} />
+        <p>Linkedin</p>
+        </a>
+        </li>
+        <li className='py-6 px-4xl text-lg' style={{display: 'flex', alignItems: 'center'}}>
+        <a href="https://github.com/iagoalvarezsande" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'white' }}>
+            <FaGithub style={{ marginRight: '8px' }} />
+            <p>GitHub</p>
+          </a>
+        </li>
       </ul>
 
       {/* Social Icons */}

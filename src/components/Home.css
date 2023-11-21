@@ -1,20 +1,29 @@
-/* Add this CSS for transition effects */
+/* Color Transition hover.css */
+@keyframes colorChange {
+  0% {
+    color: inherit; /* Inherit the current color */
+  }
+  50% {
+    color: #5CE1E6;
+  }
+  100% {
+    color: magenta;
+  }
+}
 
-.switch-fade-enter {
-    opacity: 0;
-  }
-  
-  .switch-fade-enter-active {
-    opacity: 1;
-    transition: opacity 2s ease-in-out; /* Adjust the timing and easing */
-  }
-  
-  .switch-fade-exit {
-    opacity: 1;
-  }
-  
-  .switch-fade-exit-active {
-    opacity: 0;
-    transition: opacity 2s ease-in-out; /* Adjust the timing and easing */
-  }
-  
+.color-transition-container:hover h1,
+.color-transition-container:hover h2,
+.color-transition-container:hover h3 {
+  animation: colorChange 2s infinite alternate; /* 2s duration, infinite loop, alternate direction */
+}
+/* FadeIn.css */
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+

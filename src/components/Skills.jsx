@@ -21,7 +21,7 @@ const SkillContainer = ({ title, description, iconSrc }) => {
 
 const Skills = () => {
   return (
-    <section name='Skills' className='flex w-full min-h'>
+    <section name='skills' className='flex w-full min-h'>
       <div className='flex-col justify-center items-start w-full h-full px-4'>
         <div className='max-w-[1500px] w-full'>
           <div className='pb-4'>
