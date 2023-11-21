@@ -16,14 +16,3 @@
 .color-transition-container:hover h3 {
   animation: colorChange 2s infinite alternate; /* 2s duration, infinite loop, alternate direction */
 }
-/* FadeIn.css */
-.fade-in {
-  opacity: 1;
-  transition: opacity 1s ease-in;
-}
-
-.fade-out {
-  opacity: 0;
-  transition: opacity 1s ease-out;
-}
-

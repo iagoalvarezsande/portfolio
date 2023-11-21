@@ -33,11 +33,12 @@ const Home = () => {
   return (
     <div name='home' className='w-full h-screen flex flex-col items-center justify-center'>
       <div className="flex flex-col items-center">
+        <div name='Logos' className='overflow-hidden'>
         <div
-          className="rounded-full overflow-hidden"
-          style={{ width: '200px', height: '200px', cursor: 'pointer', display: showLogo ? 'block' : 'none' }}
-          onClick={() => handleClick('Logo')}
-        >
+          className="rounded-full"
+          style={{ width: '200px', height: '200px', cursor: 'pointer', 
+          display: showLogo ? 'block' : 'none',}} 
+          onClick={() => handleClick('Logo')}>
           <img
             name='Logo'
             className='w-full h-full hover:animate-pulse'
@@ -46,23 +47,24 @@ const Home = () => {
           />
         </div>
         <div
-          className="rounded-full overflow-hidden"
-          style={{ width: '200px', height: '200px', cursor: 'pointer', display: showPicture ? 'block' : 'none' }}
-          onClick={() => handleClick('Picture')}
-        >
+          className="rounded-full"
+          style={{ width: '200px', height: '200px', cursor: 'pointer', display: showPicture ? 'block' : 'none',}}
+          onClick={() => handleClick('Picture')}>
           <img
             name='Picture'
             className='w-full h-full'
-            src={Avatar}
+            src={Avatar} 
             alt="Picture Image"
           />
         </div>
-        <div className='max-w-[1000px] mx-auto px-8' style={{ minHeight: '300px' }}>
+        </div>
+
+        <div name='Headers 'className='max-w-[1000px] mx-auto px-8' style={{ minHeight: '300px' }}>
           {/* Container */}
           <div
             className='color-transition-container'
-            onClick={() => handleClick('Header')}
-          >
+            onClick={() => handleClick('Header')}>
+
             <FadeIn>
               <h1 className='text-7xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-center cursor-pointer'>
                 Hello there!
@@ -84,7 +86,8 @@ const Home = () => {
             )}
           </div>
         </div>
-        <div>
+
+        <div name='Button'>
           <button className='border-2 py-3 px-3 my-2 flex items-center hover:bg-pink-600'>
             <Link to="about" smooth={true} duration={500}>
               Know Me Better
