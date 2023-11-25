@@ -2,6 +2,7 @@ import Home from "./components/Home";
 import Searchbar from "./components/Searchbar";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import TestChatbot from "./components/TestChatbot";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <Home />
     <About />
     <Skills />
+    <TestChatbot />
     </div>
   );
 }
